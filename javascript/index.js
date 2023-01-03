@@ -52,6 +52,8 @@ function updateCity(event) {
   )}</small>
   </div>
   </div>`;
+  let selecElement = document.querySelector("#city-selected");
+  selecElement.selectedIndex = 0;
 }
 
 let citySelectedElement = document.querySelector("#city-selected");
