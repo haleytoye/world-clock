@@ -9,7 +9,7 @@ body {
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
   background-color: white;
   padding: 40px;
-  color: dimgray;
+  color: rgb(76, 75, 75);
   border-radius: 8px;
 }
 .city {
