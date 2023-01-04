@@ -2,12 +2,49 @@ body {
   background-color: rgba(149, 185, 224, 0.2);
   font-family: Arial, Helvetica, sans-serif;
 }
-
+button {
+  display: block;
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  transition: all 100ms ease-in;
+  background-color: black;
+}
+button:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+}
+.dark {
+  color: whitesmoke;
+  background-color: #000;
+}
+.dark .container {
+  color: whitesmoke;
+  background-color: rgb(86, 86, 86);
+}
+.dark h1 {
+  color: whitesmoke;
+}
+.dark a {
+  color: whitesmoke;
+}
+.dark select {
+  color: whitesmoke;
+  background-color: grey;
+}
+.dark footer {
+  color: rgb(86, 86, 86);
+}
 .container {
   max-width: 600px;
   margin: 60px auto;
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-  background-color: white;
+  background-color: whitesmoke;
   padding: 40px;
   color: rgb(76, 75, 75);
   border-radius: 8px;

@@ -68,9 +68,20 @@ function setCityInterval(cityTZ, cityName) {
   let selecElement = document.querySelector("#city-selected");
   selecElement.selectedIndex = 0;
 }
-
+function changeTheme() {
+  console.log("dark");
+  let body = document.querySelector("body");
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
+  } else {
+    body.classList.add("dark");
+  }
+}
 let citySelectedElement = document.querySelector("#city-selected");
 citySelectedElement.addEventListener("change", updateCity);
+
+let darkbutton = document.querySelector(".theme");
+darkbutton.addEventListener("click", changeTheme);
 
 updateCityTime();
 setInterval(updateCityTime, 1000);
