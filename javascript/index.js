@@ -73,7 +73,16 @@ function changeTheme() {
   let body = document.querySelector("body");
   if (body.classList.contains("dark")) {
     body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
   } else {
+    body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+function darkTheme() {
+  let theme = localStorage.getItem("theme");
+  if (theme === "dark") {
     body.classList.add("dark");
   }
 }
@@ -82,6 +91,8 @@ citySelectedElement.addEventListener("change", updateCity);
 
 let darkbutton = document.querySelector(".theme");
 darkbutton.addEventListener("click", changeTheme);
+
+window.addEventListener("load", darkTheme);
 
 updateCityTime();
 setInterval(updateCityTime, 1000);
