@@ -81,6 +81,7 @@ function changeTheme() {
 }
 
 function darkTheme() {
+  let body = document.querySelector("body");
   let theme = localStorage.getItem("theme");
   if (theme === "dark") {
     body.classList.add("dark");
