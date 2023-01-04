@@ -1,4 +1,4 @@
-function updateParisTime() {
+function updateCityTime() {
   let sfElement = document.querySelector("#san-francisco");
   if (sfElement) {
     let sfDateEl = sfElement.querySelector(".date");
@@ -32,8 +32,8 @@ function updateParisTime() {
     isTimeEl.innerHTML = isTime.format("H:mm:ss [<small>]A[</small>]");
   }
 }
-updateParisTime();
-setInterval(updateParisTime, 1000);
+
+let cityInterval = null;
 
 function updateCity(event) {
   let cityTZ = event.target.value;
@@ -41,8 +41,15 @@ function updateCity(event) {
     cityTZ = moment.tz.guess();
   }
   let cityName = cityTZ.replace("_", "").split("/")[1];
-  let cityTime = moment().tz(cityTZ);
+  clearInterval(cityInterval);
+
+  setCityInterval(cityTZ, cityName);
+  cityInterval = setInterval(setCityInterval, 1000, cityTZ, cityName);
+}
+
+function setCityInterval(cityTZ, cityName) {
   let citiesEl = document.querySelector("#cities");
+  let cityTime = moment().tz(cityTZ);
   citiesEl.innerHTML = `
   <div class="city">
     <div>
@@ -55,6 +62,7 @@ function updateCity(event) {
   )}</small>
   </div>
   </div>
+  </br>
   <a href="/">All cities</a>`;
 
   let selecElement = document.querySelector("#city-selected");
@@ -63,3 +71,6 @@ function updateCity(event) {
 
 let citySelectedElement = document.querySelector("#city-selected");
 citySelectedElement.addEventListener("change", updateCity);
+
+updateCityTime();
+setInterval(updateCityTime, 1000);
