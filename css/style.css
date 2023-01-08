@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(149, 185, 224, 0.2);
+  background-color: #dfe5f9; /*rgba(149, 185, 224, 0.2);*/
   font-family: Arial, Helvetica, sans-serif;
 }
 button {
@@ -42,18 +42,20 @@ button:hover {
 }
 .container {
   max-width: 600px;
-  margin: 60px auto;
+  margin: 100px auto;
+  margin-bottom: 5px;
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-  background-color: whitesmoke;
+  background-color: white;
   padding: 40px;
   color: rgb(76, 75, 75);
   border-radius: 8px;
+  border: 2px solid #4288f0;
 }
 .city {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 1px dashed #38598b; /*rgba(0, 0, 0, 0.2);*/
 }
 .city:last-child {
   border: none;
@@ -72,8 +74,8 @@ button:hover {
 h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
-  font-size: 30pt;
-  color: black;
+  font-size: 36pt;
+  color: #38598b;
 }
 h2 {
   margin: 0 0 5px;
@@ -88,7 +90,8 @@ select {
 }
 a {
   text-decoration: none;
-  color: blue;
+  color: #38598b;
+  font-weight: 400;
 }
 a:hover {
   font-weight: bolder;
@@ -97,4 +100,5 @@ footer {
   text-align: center;
   font-size: 14pt;
   color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 100px;
 }
